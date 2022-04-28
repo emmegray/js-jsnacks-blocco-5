@@ -75,15 +75,16 @@ let pesoPiccole = 0;
 
 for (let index = 0; index < zucchine.length; index++) {
     const zucchina = zucchine[index];
+    const { peso, lunghezza } = zucchina;
 
-    if (zucchina.lunghezza > 15) {
+    if (lunghezza > 15) {
         zucchineGrandi.push(zucchina)
-        pesoGrandi += zucchina.peso
-    }else {
+        pesoGrandi += peso
+    } else {
         zucchinePiccole.push(zucchina)
-        pesoPiccole += zucchina.peso
+        pesoPiccole += peso
     }
 }
 
-document.getElementById("PesoZucchineGrandi").textContent = `Peso totale zucchine grandi: ${pesoGrandi}`
-document.getElementById("PesoZucchinePiccola").textContent = `Peso totale zucchine piccole: ${pesoPiccole}`
+document.getElementById("PesoZucchineGrandi").textContent = `Peso totale zucchine grandi: ${pesoGrandi}kg`
+document.getElementById("PesoZucchinePiccola").textContent = `Peso totale zucchine piccole: ${pesoPiccole}kg`
